@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Главная - Моя коллекция{% endblock %}
+
+{% block content %}
+<h2>Моя коллекция</h2>
+
+<!-- Задание: Добавь сюда поле поиска и фильтр по жанрам -->
+<div class="controls">
+    <input type="text" id="search" placeholder="Поиск по названию...">
+    <select id="filter">
+        <option value="all">Все жанры</option>
+        <!-- Добавь сюда опции жанров -->
+    </select>
+</div>
+
+<!-- Задание: Создай сетку карточек -->
+<div class="grid" id="items-grid">
+    <!-- Здесь будут карточки из БД -->
+    <!-- Используй цикл: {% for item in items %} ... {% endfor %} -->
+    
+    <p>Пока нет элементов. <a href="{{ url_for('add') }}">Добавить первый!</a></p>
+</div>
+{% endblock %}

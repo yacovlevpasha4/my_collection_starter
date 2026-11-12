@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить - Моя коллекция{% endblock %}
+
+{% block content %}
+<h2>Добавить новый элемент</h2>
+
+<!-- Задание: Создай форму для добавления элемента -->
+<form method="POST" action="{{ url_for('add') }}">
+    <div class="form-group">
+        <label for="title">Название</label>
+        <input type="text" id="title" name="title" required>
+    </div>
+
+    <div class="form-group">
+        <label for="year">Год</label>
+        <input type="number" id="year" name="year" required>
+    </div>
+
+    <div class="form-group">
+        <label for="genre">Жанр</label>
+        <select id="genre" name="genre" required>
+            <!-- Добавь сюда опции жанров -->
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="image_url">Ссылка на картинку</label>
+        <input type="url" id="image_url" name="image_url" placeholder="https://...">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Описание</label>
+        <textarea id="description" name="description"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Добавить</button>
+</form>
+{% endblock %}

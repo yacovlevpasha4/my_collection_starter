@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.title }} - Моя коллекция{% endblock %}
+
+{% block content %}
+<!-- Задание: Сверстай страницу конкретного элемента -->
+<!-- Здесь будут: большая картинка, название, год, жанр, описание -->
+
+<div class="item-detail">
+    <h2>{{ item.title }}</h2>
+    <!-- Добавь сюда остальные поля -->
+</div>
+
+<a href="{{ url_for('index') }}" class="btn">← Назад к каталогу</a>
+{% endblock %}
