@@ -7,11 +7,11 @@
 
 /* === ТЕМЫ (выбери одну и раскомментируй) === */
 :root {
-    /* 🎬 ТЕМА "КИНОТЕАТР" (темная, красная) */
-    /* --primary: #dc2626;
+    /*🎬 ТЕМА "КИНОТЕАТР" (темная, красная) */
+    --primary: #dc2626;
     --bg: #111827;
     --card-bg: #1f2937;
-    --text: #f9fafb; */
+    --text: #f9fafb; 
 
     /*📚 ТЕМА "БИБЛИОТЕКА" (теплая, бежевая)*/
     /*--primary: #0e9219;
@@ -19,11 +19,11 @@
     --card-bg: #fffbeb;
     --text: #132e24;*/
 
-    /* 🎮 ТЕМА "ГЕЙМЕРСКАЯ" (неоновая, фиолетовая) */
+    /* 🎮 ТЕМА "ГЕЙМЕРСКАЯ" (неоновая, фиолетовая) 
     --primary: #8b5cf6;
     --bg: #0f172a;
     --card-bg: #1e293b;
-    --text: #e0e7ff; 
+    --text: #e0e7ff; */
 
     /* ДЕФОЛТНАЯ ТЕМА (синяя) - оставь эту, если не выбрал */
     /*--primary: #3b82f6;
@@ -216,3 +216,30 @@ footer {
         gap: 1rem;
     }
 }
+/* === СТИЛИ ДЛЯ СТРАНИЦЫ ЭЛЕМЕНТА === */
+.item-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.item-detail h1, 
+.item-detail h2 {
+    margin-bottom: 10px;
+}
+
+.item-detail p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.item-detail img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain; /* Сохраняет пропорции картинки */
+    margin: 20px auto;
+    border-radius: 8px;
+}
+

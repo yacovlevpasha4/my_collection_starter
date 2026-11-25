@@ -12,27 +12,23 @@ def get_db():
 # === ГЛАВНАЯ СТРАНИЦА ===
 @app.route('/')
 def index():
-    # Задание: Получи все элементы из БД и передай в шаблон
-    # conn = get_db()
-    # cursor = conn.cursor()
-    # cursor.execute("SELECT * FROM items")
-    # items = cursor.fetchall()
-    # return render_template('index.html', items=items)
+     #Задание: Получи все элементы из БД и передай в шаблон
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM items")
+    items = cursor.fetchall()
+    return render_template('index.html', items=items)
     
-    return render_template('index.html', items=[])  # Пока возвращаем пустой список
-
-# === СТРАНИЦА ЭЛЕМЕНТА ===
 @app.route('/item/<int:item_id>')
 def item(item_id):
-    # Задание: Получи один элемент по ID из БД
-    # conn = get_db()
-    # cursor = conn.cursor()
-    # cursor.execute("SELECT * FROM items WHERE id = ?", (item_id,))
-    # item = cursor.fetchone()
-    # return render_template('item.html', item=item)
+    #Задание: Получи один элемент по ID из БД
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM items WHERE id = ?", (item_id,))
+    item = cursor.fetchone()
+    return render_template('item.html', item=item)
     
-    return "Страница элемента (доделай!)"
-
+   
 # === ФОРМА ДОБАВЛЕНИЯ ===
 @app.route('/add', methods=['GET', 'POST'])
 def add():

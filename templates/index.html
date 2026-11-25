@@ -18,7 +18,18 @@
 <div class="grid" id="items-grid">
     <!-- Здесь будут карточки из БД -->
     <!-- Используй цикл: {% for item in items %} ... {% endfor %} -->
-    
-    <p>Пока нет элементов. <a href="{{ url_for('add') }}">Добавить первый!</a></p>
+
+    {% for item in items %}
+    <a href="/item/{{ item.id }}" class="card" style="text-decoration: none; color: inherit;">
+        <img src="{{ item.image_url }}" alt="{{ item.title }}">
+        <div class="card-content">
+            <h3 class="card-title">{{ item.title }}</h3>
+            <p class="card-meta">{{ item.year }} • {{ item.genre }}</p>
+            <p class="card-meta-desc">{{ item.description }}</p>
+        </div>
+    </a>
+    {% endfor %}
+
+
 </div>
 {% endblock %}

@@ -8,8 +8,11 @@
 
 <div class="item-detail">
     <h2>{{ item.title }}</h2>
-    <!-- Добавь сюда остальные поля -->
+    <p>Год: {{ item.year }}</p>
+    <p>Жанр: {{ item.genre }}</p>
+    <img src="{{ item.image_url }}" alt="{{ item.title }}">
+    <p>{{ item.description }}</p>
 </div>
-
 <a href="{{ url_for('index') }}" class="btn">← Назад к каталогу</a>
+
 {% endblock %}
